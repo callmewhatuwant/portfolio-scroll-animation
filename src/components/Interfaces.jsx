@@ -46,7 +46,7 @@ const AboutSection = () => {
       <h1 className="text-6xl font-extrabold leading-snug">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span className="bg-white px-1 italic">Nick Georgi</span>
       </h1>
       <motion.p
         className="text-lg text-gray-600 mt-4"
@@ -63,9 +63,9 @@ const AboutSection = () => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
+        I am a backend developer wich also likes frontend
         <br />
-        learn how to build 3D apps
+        Learn how to build containered apps
       </motion.p>
       <motion.button
         className={`bg-indigo-600 text-white py-4 px-8 
@@ -113,7 +113,7 @@ const skills = [
 ];
 const languages = [
   {
-    title: "🇫🇷 French",
+    title: "🇩🇪 German",
     level: 100,
   },
   {
@@ -121,7 +121,7 @@ const languages = [
     level: 80,
   },
   {
-    title: "🇯🇵 Japanese",
+    title: "🇪🇸 Spanish",
     level: 20,
   },
 ];
