@@ -5,6 +5,7 @@ import { Experience } from "./components/Experience";
 import { Menu } from "./components/Menu";
 import { ScrollManager } from "./components/ScrollManager";
 import { Interface } from "./components/Interfaces";
+import { MotionConfig } from "framer-motion";
 
 
 
@@ -18,6 +19,14 @@ function App() {
 
   return (
     <>
+    <MotionConfig transition={{
+      type:"spring",
+      mass: "5",
+      stiffness: 500,
+      damping: 50,
+      resDelta: 0.0001,
+    }}
+    >
       <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
           <color attach="background" args={["#e6e7ff"]} />
           <ScrollControls pages={4} damping={0.1}>
@@ -35,6 +44,7 @@ function App() {
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
         />
+        </MotionConfig>
      </>
   );
 }

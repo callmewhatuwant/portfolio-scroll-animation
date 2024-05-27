@@ -5,13 +5,17 @@ Command: npx gltfjsx@6.2.11 .\public\models\scene.glb -k
 
 import React, { useRef } from 'react';
 import { useGLTF, useTexture } from '@react-three/drei';
+import {motion} from "framer-motion-3d"
+
 
 import *as THREE from "three";
 
 export function Office(props) {
-  const { nodes, materials } = useGLTF('models/scene.glb')
 
-  const texture = useTexture("textures/backed.jpg")
+  const {section} = props;
+  const { nodes, materials } = useGLTF('models/scene.glb');
+
+  const texture = useTexture("textures/backed.jpg");
 
   const textureMaterial = new THREE.MeshStandardMaterial({
     map:texture,
