@@ -8,7 +8,7 @@ import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useEffect } from "react";
 import { framerMotionConfig } from "../config";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Avatar.jsx";
 import { Office } from "./Office";
 
 export const Experience = (props) => {
