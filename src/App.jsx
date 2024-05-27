@@ -8,6 +8,7 @@ import { Interface } from "./components/Interfaces";
 import { Menu } from "./components/Menu";
 import { ScrollManager } from "./components/ScrollManager";
 import { framerMotionConfig } from "./config";
+import { Cursor } from "./components/Cursor";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -41,6 +42,7 @@ function App() {
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
         />
+        <Cursor/>
       </MotionConfig> 
       <Leva hidden />
     </>
