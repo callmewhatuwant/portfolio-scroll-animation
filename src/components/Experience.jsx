@@ -44,6 +44,10 @@ export const Experience = (props) => {
         }}
       >
         <Office section={section} />
+
+        <group name="Empty" position={[-0.293, 0.125, -0.689]} rotation={[-Math.PI, 0.322, -Math.PI]} scale={1.05}>
+          <Avatar animation ={section === 0 ? "Typing": "Standing"}/>
+          </group>
       </motion.group>
 
       {/* SKILLS */}
@@ -91,9 +95,7 @@ export const Experience = (props) => {
             />
           </mesh>
         </Float>
-        <group scale={[2, 2, 2]} position-y={-1.5}>
-          <Avatar animation={section === 0 ? "Falling" : "Standing"} />
-        </group>
+       
       </motion.group>
     </>
   );

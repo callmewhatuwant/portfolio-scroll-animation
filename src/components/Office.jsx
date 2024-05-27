@@ -13,7 +13,7 @@ import * as THREE from "three";
 export function Office(props) {
   const { section } = props;
   const { nodes, materials } = useGLTF("models/scene.glb");
-  const texture = useTexture("textures/baked.jpg");
+  const texture = useTexture("textures/backed.jpg");
   texture.flipY = false;
   texture.encoding = THREE.sRGBEncoding;
 
@@ -45,11 +45,8 @@ export function Office(props) {
 
   return (
     <group {...props} dispose={null}>
-      <motion.group
-         scale={[0, 0, 0]}
-         animate={{
-           scale: section === 0 ? 1 : 0,
-         }} name="chair" position={[-0.31, 0, -0.935]} rotation={[0, -0.26, 0]}>
+      <motion.group         
+        name="chair" position={[-0.31, 0, -0.845]} rotation={[0, -0.26, 0]} scale={1.14}>
         <mesh name="Desk_Chair" geometry={nodes.Desk_Chair.geometry} material={textureMaterial} />
         <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={textureMaterial} />
         <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={textureMaterial} />
@@ -84,7 +81,7 @@ export function Office(props) {
         <mesh name="iMac_1_1" geometry={nodes.iMac_1_1.geometry} material={textureMaterial} />
         <mesh name="iMac_1_2" geometry={nodes.iMac_1_2.geometry} material={textureMaterial} />
       </motion.group>
-      <group name="keyboard" position={[0.112, 0.981, -1.346]} rotation={[0, -0.165, 0]}>
+      <group name="keyboard"  position={[-0.158, 0.981, -1.395]} rotation={[0, -0.165, 0]} scale={0.713}>
         <mesh name="mesh425587018" geometry={nodes.mesh425587018.geometry} material={textureMaterial} />
         <mesh name="mesh425587018_1" geometry={nodes.mesh425587018_1.geometry} material={textureMaterial} />
         <mesh name="mesh425587018_2" geometry={nodes.mesh425587018_2.geometry} material={textureMaterial} />
@@ -113,12 +110,12 @@ export function Office(props) {
         <mesh name="palm_tree_01-Mesh001_1" geometry={nodes['palm_tree_01-Mesh001_1'].geometry} material={textureMaterial} />
         <mesh name="palm_tree_01-Mesh001_2" geometry={nodes['palm_tree_01-Mesh001_2'].geometry} material={textureMaterial} />
       </motion.group>
-      <mesh name="mouse" geometry={nodes.mouse.geometry} material={textureMaterial} position={[-0.405, 0.95, -1.397]} rotation={[-Math.PI, 0.345, -Math.PI]} />
+      <mesh name="mouse" geometry={nodes.mouse.geometry} material={textureMaterial}  position={[0.239, 0.95, -1.306]} rotation={[-Math.PI, 0.345, -Math.PI]} />
       <group name="shelf" position={[-0.868, 1.694, -2.038]}>
         <mesh name="SM_ShelfSM_Shelf1_1" geometry={nodes.SM_ShelfSM_Shelf1_1.geometry} material={textureMaterial} />
         <mesh name="SM_ShelfSM_Shelf1_1_1" geometry={nodes.SM_ShelfSM_Shelf1_1_1.geometry} material={textureMaterial} />
       </group>
-      <group name="speaker_right" position={[0.744, 0.936, -1.605]} rotation={[0, -0.324, 0]}>
+      <group name="speaker_right" position={[0.607, 0.936, -1.605]} rotation={[0, -0.324, 0]}>
         <mesh name="speaker003" geometry={nodes.speaker003.geometry} material={textureMaterial} />
         <mesh name="speaker003_1" geometry={nodes.speaker003_1.geometry} material={textureMaterial} />
       </group>
