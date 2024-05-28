@@ -12,6 +12,7 @@ import { framerMotionConfig } from "../config";
 import { Avatar } from "./Avatar";
 import { Projects } from "./Projects";
 import { Office } from "./Office";
+import { Background } from "./Background";
 
 
 export const Experience = (props) => {
@@ -71,7 +72,7 @@ export const Experience = (props) => {
 
   return (
     <>
-     
+      <Background/>
       <motion.group
         position={[1.7520128568148856,0.135,2.3750590267873295]}
         rotation={[-3.141592653589793, 1.1073981633974483, 3.141592653589793]}
