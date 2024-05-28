@@ -33,6 +33,7 @@ export function Model(props) {
           <mesh name="Plane001_2" geometry={nodes.Plane001_2.geometry} material={materials.walls_wh} />
           <mesh name="Plane001_3" geometry={nodes.Plane001_3.geometry} material={materials.wood} />
         </group>
+        <mesh name="screen" geometry={nodes.screen.geometry} material={materials.Screen} position={[0.083, 0.939, -1.723]} rotation={[Math.PI, -1.366, Math.PI]} />
         <group name="mew" position={[-0.532, 2.176, -2.006]} rotation={[-Math.PI, 0.277, -Math.PI]}>
           <mesh name="mesh731660817" geometry={nodes.mesh731660817.geometry} material={materials.mat6} />
           <mesh name="mesh731660817_1" geometry={nodes.mesh731660817_1.geometry} material={materials.mat21} />
@@ -85,8 +86,7 @@ export function Model(props) {
           <mesh name="Plane001_Plane002_BlackWood001_4" geometry={nodes.Plane001_Plane002_BlackWood001_4.geometry} material={materials['BlackPlastic.001']} />
         </group>
         <mesh name="WawaRug" geometry={nodes.WawaRug.geometry} material={materials.Rug} position={[-0.281, 0.009, 0.765]} />
-        <mesh name="screen" geometry={nodes.screen.geometry} material={materials.Screen} position={[0.083, 0.939, -1.723]} rotation={[Math.PI, -1.366, Math.PI]} />
-        <group name="Desk_Chair" position={[-0.193, 0, -0.782]} rotation={[0, -0.363, 0]} scale={126.038}>
+        <group name="Desk_Chair" position={[-0.169, 0, -0.807]} rotation={[0, -0.182, 0]} scale={127.958}>
           <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={materials.mat23} />
           <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={materials.mat16} />
           <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={materials.mat20} />

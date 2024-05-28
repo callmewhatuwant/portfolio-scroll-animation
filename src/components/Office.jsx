@@ -45,6 +45,11 @@ export function Office(props) {
 
   return (
     <group {...props} dispose={null}>
+      <mesh name="screen" 
+      geometry={nodes.screen.geometry}
+      material={materials.Screen} 
+      position={[0.24, 0.939, -1.723]} 
+      rotation={[Math.PI, -1.366, Math.PI]} />
       <motion.group         
         name="Desk_Chair" position={[-0.193, 0, -0.782]} rotation={[0, -0.363, 0]} scale={115.038}>
         <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={textureMaterial} />
