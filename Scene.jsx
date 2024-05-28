@@ -13,31 +13,25 @@ export function Model(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Empty" position={[-0.293, 0.175, -0.689]} rotation={[-Math.PI, 0.322, -Math.PI]} scale={1.11}>
+        <group name="Empty" position={[-0.235, 0.242, -0.738]} rotation={[-Math.PI, 0.335, -Math.PI]}>
           <group name="Armature">
             <primitive object={nodes.Hips} />
           </group>
-          <skinnedMesh name="Wolf3D_Body" geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
-          <skinnedMesh name="Wolf3D_Hair" geometry={nodes.Wolf3D_Hair.geometry} material={materials.Wolf3D_Hair} skeleton={nodes.Wolf3D_Hair.skeleton} />
-          <skinnedMesh name="Wolf3D_Outfit_Bottom" geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
-          <skinnedMesh name="Wolf3D_Outfit_Footwear" geometry={nodes.Wolf3D_Outfit_Footwear.geometry} material={materials.Wolf3D_Outfit_Footwear} skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton} />
-          <skinnedMesh name="Wolf3D_Outfit_Top" geometry={nodes.Wolf3D_Outfit_Top.geometry} material={materials.Wolf3D_Outfit_Top} skeleton={nodes.Wolf3D_Outfit_Top.skeleton} />
-          <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary} morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences} />
-          <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} morphTargetDictionary={nodes.EyeRight.morphTargetDictionary} morphTargetInfluences={nodes.EyeRight.morphTargetInfluences} />
-          <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials.Wolf3D_Skin} skeleton={nodes.Wolf3D_Head.skeleton} morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences} />
-          <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials.Wolf3D_Teeth} skeleton={nodes.Wolf3D_Teeth.skeleton} morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences} />
+          <skinnedMesh name="Wolf3D_Body" geometry={nodes.Wolf3D_Body.geometry} material={materials['Wolf3D_Body.001']} skeleton={nodes.Wolf3D_Body.skeleton} />
+          <skinnedMesh name="Wolf3D_Hair" geometry={nodes.Wolf3D_Hair.geometry} material={materials['Wolf3D_Hair.001']} skeleton={nodes.Wolf3D_Hair.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Bottom" geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials['Wolf3D_Outfit_Bottom.001']} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Footwear" geometry={nodes.Wolf3D_Outfit_Footwear.geometry} material={materials['Wolf3D_Outfit_Footwear.001']} skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Top" geometry={nodes.Wolf3D_Outfit_Top.geometry} material={materials['Wolf3D_Outfit_Top.001']} skeleton={nodes.Wolf3D_Outfit_Top.skeleton} />
+          <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials['Wolf3D_Eye.001']} skeleton={nodes.EyeLeft.skeleton} morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary} morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences} />
+          <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials['Wolf3D_Eye.001']} skeleton={nodes.EyeRight.skeleton} morphTargetDictionary={nodes.EyeRight.morphTargetDictionary} morphTargetInfluences={nodes.EyeRight.morphTargetInfluences} />
+          <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials['Wolf3D_Skin.001']} skeleton={nodes.Wolf3D_Head.skeleton} morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences} />
+          <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials['Wolf3D_Teeth.001']} skeleton={nodes.Wolf3D_Teeth.skeleton} morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences} />
         </group>
         <group name="Plane">
           <mesh name="Plane001" geometry={nodes.Plane001.geometry} material={materials.Material} />
           <mesh name="Plane001_1" geometry={nodes.Plane001_1.geometry} material={materials.Glass} />
           <mesh name="Plane001_2" geometry={nodes.Plane001_2.geometry} material={materials.walls_wh} />
           <mesh name="Plane001_3" geometry={nodes.Plane001_3.geometry} material={materials.wood} />
-        </group>
-        <group name="chair" position={[-0.31, 0, -0.845]} rotation={[0, -0.26, 0]} scale={1.158}>
-          <mesh name="Desk_Chair" geometry={nodes.Desk_Chair.geometry} material={materials['mat23.003']} />
-          <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={materials['mat16.002']} />
-          <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={materials.mat20} />
-          <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={materials['mat17.001']} />
         </group>
         <group name="mew" position={[-0.532, 2.176, -2.006]} rotation={[-Math.PI, 0.277, -Math.PI]}>
           <mesh name="mesh731660817" geometry={nodes.mesh731660817.geometry} material={materials.mat6} />
@@ -51,9 +45,8 @@ export function Model(props) {
           <mesh name="Houseplant_7_2" geometry={nodes.Houseplant_7_2.geometry} material={materials['Plant_Green.001']} />
         </group>
         <group name="monitor" position={[0.083, 0.939, -1.723]} rotation={[Math.PI, -1.366, Math.PI]}>
-          <mesh name="iMac_1" geometry={nodes.iMac_1.geometry} material={materials.Screen} />
-          <mesh name="iMac_1_1" geometry={nodes.iMac_1_1.geometry} material={materials.ScreenBlack} />
-          <mesh name="iMac_1_2" geometry={nodes.iMac_1_2.geometry} material={materials.iMacBody} />
+          <mesh name="iMac_1" geometry={nodes.iMac_1.geometry} material={materials.ScreenBlack} />
+          <mesh name="iMac_1_1" geometry={nodes.iMac_1_1.geometry} material={materials.iMacBody} />
         </group>
         <group name="keyboard" position={[-0.158, 0.981, -1.395]} rotation={[0, -0.165, 0]} scale={0.713}>
           <mesh name="mesh425587018" geometry={nodes.mesh425587018.geometry} material={materials['mat21.004']} />
@@ -92,6 +85,13 @@ export function Model(props) {
           <mesh name="Plane001_Plane002_BlackWood001_4" geometry={nodes.Plane001_Plane002_BlackWood001_4.geometry} material={materials['BlackPlastic.001']} />
         </group>
         <mesh name="WawaRug" geometry={nodes.WawaRug.geometry} material={materials.Rug} position={[-0.281, 0.009, 0.765]} />
+        <mesh name="screen" geometry={nodes.screen.geometry} material={materials.Screen} position={[0.083, 0.939, -1.723]} rotation={[Math.PI, -1.366, Math.PI]} />
+        <group name="Desk_Chair" position={[-0.193, 0, -0.782]} rotation={[0, -0.363, 0]} scale={126.038}>
+          <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={materials.mat23} />
+          <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={materials.mat16} />
+          <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={materials.mat20} />
+          <mesh name="Desk_Chair_4" geometry={nodes.Desk_Chair_4.geometry} material={materials.mat17} />
+        </group>
       </group>
     </group>
   )

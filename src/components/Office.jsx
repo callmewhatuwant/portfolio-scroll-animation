@@ -46,11 +46,11 @@ export function Office(props) {
   return (
     <group {...props} dispose={null}>
       <motion.group         
-        name="chair" position={[-0.31, 0, -0.845]} rotation={[0, -0.26, 0]} scale={1.14}>
-        <mesh name="Desk_Chair" geometry={nodes.Desk_Chair.geometry} material={textureMaterial} />
-        <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={textureMaterial} />
-        <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={textureMaterial} />
-        <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={textureMaterial} />
+        name="Desk_Chair" position={[-0.193, 0, -0.782]} rotation={[0, -0.363, 0]} scale={115.038}>
+        <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={materials.mat23} />
+        <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={materials.mat16} />
+        <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={materials.mat20} />
+        <mesh name="Desk_Chair_4" geometry={nodes.Desk_Chair_4.geometry} material={materials.mat17} />
       </motion.group>
       <motion.group
          scale={[0, 0, 0]}
@@ -77,9 +77,8 @@ export function Office(props) {
          animate={{
            scale: section === 0 ? 1 : 0,
          }} name="monitor" position={[0.236, 0.939, -1.723]} rotation={[Math.PI, -1.366, Math.PI]}>
-        <mesh name="iMac_1" geometry={nodes.iMac_1.geometry} material={textureMaterial} />
-        <mesh name="iMac_1_1" geometry={nodes.iMac_1_1.geometry} material={textureMaterial} />
-        <mesh name="iMac_1_2" geometry={nodes.iMac_1_2.geometry} material={textureMaterial} />
+        <mesh name="iMac_1" geometry={nodes.iMac_1.geometry} material={materials.ScreenBlack} />
+        <mesh name="iMac_1_1" geometry={nodes.iMac_1_1.geometry} material={materials.iMacBody} />
       </motion.group>
       <group name="keyboard"  position={[-0.158, 0.981, -1.395]} rotation={[0, -0.165, 0]} scale={0.713}>
         <mesh name="mesh425587018" geometry={nodes.mesh425587018.geometry} material={textureMaterial} />
