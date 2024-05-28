@@ -10,7 +10,7 @@ import { motion } from "framer-motion-3d";
 import { useEffect, useRef, useState } from "react";
 import { framerMotionConfig } from "../config";
 import { Avatar } from "./Avatar";
-
+import { Projects } from "./Projects";
 import { Office } from "./Office";
 
 
@@ -178,6 +178,7 @@ export const Experience = (props) => {
           </mesh>
         </Float>
       </motion.group>
+      <Projects/>
       
     </>
   );
