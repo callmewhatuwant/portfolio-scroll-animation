@@ -13,7 +13,7 @@ import * as THREE from "three";
 export function Office(props) {
   const { section } = props;
   const { nodes, materials } = useGLTF("models/scene.glb");
-  const texture = useTexture("textures/baked.jpg");
+  const texture = useTexture("textures/baked2.jpg");
   texture.flipY = false;
   texture.encoding = THREE.sRGBEncoding;
 
@@ -47,10 +47,10 @@ export function Office(props) {
     <group {...props} dispose={null}>
       <motion.group         
         name="Desk_Chair" position={[-0.193, 0, -0.782]} rotation={[0, -0.363, 0]} scale={115.038}>
-        <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={materials.mat23} />
-        <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={materials.mat16} />
-        <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={materials.mat20} />
-        <mesh name="Desk_Chair_4" geometry={nodes.Desk_Chair_4.geometry} material={materials.mat17} />
+        <mesh name="Desk_Chair_1" geometry={nodes.Desk_Chair_1.geometry} material={textureMaterial} />
+        <mesh name="Desk_Chair_2" geometry={nodes.Desk_Chair_2.geometry} material={textureMaterial} />
+        <mesh name="Desk_Chair_3" geometry={nodes.Desk_Chair_3.geometry} material={textureMaterial} />
+        <mesh name="Desk_Chair_4" geometry={nodes.Desk_Chair_4.geometry} material={textureMaterial} />
       </motion.group>
       <motion.group
          scale={[0, 0, 0]}
