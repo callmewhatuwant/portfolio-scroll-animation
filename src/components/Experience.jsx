@@ -151,6 +151,9 @@ export const Experience = (props) => {
         animate={{
           y: isMobile ? -viewport.height / 6: 0,
         }}
+        transition={{
+          duration: 0.8,
+        }}
       >
         <Office section={section} />
         <group
