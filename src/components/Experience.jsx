@@ -88,7 +88,7 @@ export const Experience = (props) => {
         scale={[officeScaleRatio, officeScaleRatio, officeScaleRatio]}
         animate={"" + section}
         transition={{
-          duration: 0.6,
+          duration: 0.8,
         }}
         variants={{
           0: {
@@ -152,7 +152,7 @@ export const Experience = (props) => {
           y: isMobile ? -viewport.height / 6: 0,
         }}
         transition={{
-          duration: 0.8,
+          duration: 1,
         }}
       >
         <Office section={section} />
