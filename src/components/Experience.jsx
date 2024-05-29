@@ -20,6 +20,10 @@ export const Experience = (props) => {
   const { viewport } = useThree();
   const data = useScroll();
 
+  const isMobile = window.innerWidth < 768;
+  const responsiveRatio = viewport.width / 12 ;
+  const officeScaleRatio = Math.max (0.5, Math.min( 0.9 * responsiveRatio, 0.9));
+
   const [section, setSection] = useState(0);
 
   const cameraPositionX = useMotionValue();
@@ -44,6 +48,8 @@ export const Experience = (props) => {
     }, 600);
   }, [section]);
 
+  const characterGroup = useRef();
+
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
 
@@ -59,7 +65,9 @@ export const Experience = (props) => {
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
 
     // const position = new THREE.Vector3();
-    // characterContainerAboutRef.current.getWorldPosition(position);
+    if (section === 0) {
+    characterContainerAboutRef.current.getWorldPosition(characterGroup.current.position);
+    }
     // console.log([position.x, position.y, position.z]);
 
     // const quaternion = new THREE.Quaternion();
@@ -74,17 +82,19 @@ export const Experience = (props) => {
     <>
       <Background/>
       <motion.group
+        ref = {characterGroup}
         position={[1.7520128568148856,0.135,2.3750590267873295]}
         rotation={[-3.141592653589793, 1.1073981633974483, 3.141592653589793]}
+        scale={[officeScaleRatio, officeScaleRatio, officeScaleRatio]}
         animate={"" + section}
         transition={{
           duration: 0.6,
         }}
         variants={{
           0: {
-            scaleX: 0.9,
-            scaleY: 0.9,
-            scaleZ: 0.9,
+            scaleX: officeScaleRatio,
+            scaleY: officeScaleRatio,
+            scaleZ: officeScaleRatio,
           },
           1: {
             y: -viewport.height + 0.5,
@@ -93,6 +103,9 @@ export const Experience = (props) => {
             rotateX: 0,
             rotateY: 0,
             rotateZ: 0,
+            scaleX: 1,
+            scaleY: 1,
+            scaleZ: 1
           },
           2: {
             x: -2,
@@ -101,6 +114,10 @@ export const Experience = (props) => {
             rotateX: 0,
             rotateY: Math.PI / 2,
             rotateZ: 0,
+            scaleX: 1,
+            scaleY: 1,
+            scaleZ: 1,
+            
           },
           3: {
             y: -viewport.height * 3 + 1,
@@ -109,6 +126,9 @@ export const Experience = (props) => {
             rotateX: 0,
             rotateY: -Math.PI / 4,
             rotateZ: 0,
+            scaleX: 1,
+            scaleY: 1,
+            scaleZ: 1
           },
         }}
       >
@@ -116,11 +136,20 @@ export const Experience = (props) => {
       </motion.group>
       <ambientLight intensity={1} />
       <motion.group
-        position={[1.5, 2, 3]}
-        scale={[0.9, 0.9, 0.9]}
+        position={[
+          isMobile ? 0: 1.5 * officeScaleRatio, 
+          isMobile ? -viewport.height / 6 :  2, 
+          3,
+        ]}
+        scale={[
+           officeScaleRatio,
+           officeScaleRatio, 
+           officeScaleRatio,
+          ]}
+                
         rotation-y={-Math.PI / 4}
         animate={{
-          y: section === 0 ? 0 : -1,
+          y: isMobile ? -viewport.height / 6: 0,
         }}
       >
         <Office section={section} />
