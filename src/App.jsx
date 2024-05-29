@@ -2,7 +2,7 @@ import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { MotionConfig } from "framer-motion";
 import { Leva } from "leva";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Experience } from "./components/Experience";
 import { Interface } from "./components/Interfaces";
 import { Menu } from "./components/Menu";
@@ -33,10 +33,18 @@ function App() {
           <ScrollControls pages={4} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
+              <Suspense>
+                {started && (
               <Experience section={section} menuOpened={menuOpened} />
+                )}
+              </Suspense>
             </Scroll>
             <Scroll html>
+              <Suspense>
+                {started && (
               <Interface setSection={setSection}/>
+                )}
+              </Suspense>
             </Scroll>
           </ScrollControls>
         </Canvas>

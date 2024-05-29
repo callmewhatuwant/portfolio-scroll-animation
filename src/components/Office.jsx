@@ -157,7 +157,8 @@ export function Office(props) {
       <mesh name="Plane001_2" geometry={nodes.Plane001_2.geometry} material={textureMaterial} />
       <mesh name="Plane001_3" geometry={nodes.Plane001_3.geometry} material={textureMaterial} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('models/scene.glb')
+useGLTF.preload('models/scene.glb');
+useTexture.preload('textures/baked2.jpg');
