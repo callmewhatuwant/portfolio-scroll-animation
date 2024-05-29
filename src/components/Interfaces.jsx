@@ -280,6 +280,7 @@ const ContactSection = () => {
               type="text"
               name="name"
               id="name"
+              autoComplete="name"
               className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
             <label
@@ -292,6 +293,7 @@ const ContactSection = () => {
               type="email"
               name="email"
               id="email"
+              autoComplete="email"
               className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
             <ValidationError className="mt-1 text-red-500"
