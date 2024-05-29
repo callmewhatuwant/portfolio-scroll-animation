@@ -3,13 +3,14 @@ import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 
 const Section = (props) => {
-  const { children } = props;
+  const { children, mobileTop } = props;
 
   return (
     <motion.section
       className={`
   h-screen w-screen p-8 max-w-screen-2xl mx-auto
-  flex flex-col items-start justify-center
+  flex flex-col items-start
+  ${mobileTop ? "justify-start md:justify-center" : "justify-center" }
   `}
       initial={{
         opacity: 0,
@@ -35,9 +36,7 @@ export const Interface = (props) => {
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection}/>
       <SkillsSection />
-      <Section>
       <ProjectsSection/>
-      </Section>
       <ContactSection />
     </div>
   );
@@ -46,8 +45,8 @@ export const Interface = (props) => {
 const AboutSection = (props) => {
   const {setSection} = props;
   return (
-    <Section>
-      <h1 className="text-6xl font-extrabold leading-snug">
+    <Section mobileTop>
+      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:0">
         Hi, I'm
         <br />
         <span className="bg-white px-1 italic">Nick Georgi</span>
@@ -74,7 +73,7 @@ const AboutSection = (props) => {
       <motion.button
         onClick={() => setSection(3)}
         className={`bg-indigo-600 text-white py-4 px-8 
-      rounded-lg font-bold text-lg mt-16`}
+      rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
           y: 25,
@@ -134,13 +133,13 @@ const languages = [
 const SkillsSection = () => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-white">Skills</h2>
+      <motion.div className="w-full" whileInView={"visible"}>
+        <h2 className="text-3xl md:text-5xl font-bold text-white">Skills</h2>
         <div className=" mt-8 space-y-4">
           {skills.map((skill, index) => (
-            <div className="w-64" key={index}>
+            <div className="w-full md:w-64" key={index}>
               <motion.h3
-                className="text-xl font-bold text-gray-100"
+                className="text-lg md:text-xl font-bold text-gray-100"
                 initial={{
                   opacity: 0,
                 }}
@@ -179,12 +178,12 @@ const SkillsSection = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-5xl font-bold mt-10 text-white">Languages</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">Languages</h2>
           <div className=" mt-8 space-y-4">
             {languages.map((lng, index) => (
-              <div className="w-64" key={index}>
+              <div className="w-full md:w-64" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-100"
+                  className="text-lg md:text-xl font-bold text-gray-100"
                   initial={{
                     opacity: 0,
                   }}
@@ -248,7 +247,7 @@ const ProjectsSection = () => {
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold">Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">Projects</h2>
         <button
           className="hover:text-indigo-600 transition-colors"
           onClick={nextProject}
@@ -263,8 +262,8 @@ const ProjectsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl font-bold">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
+      <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
+      <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
         <form>
           <label htmlFor="name" className="font-medium text-gray-900 block mb-1">
             Name
