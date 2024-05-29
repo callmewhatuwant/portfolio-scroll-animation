@@ -26,8 +26,10 @@ export const Experience = (props) => {
 
   const [section, setSection] = useState(0);
 
-  const cameraPositionX = useMotionValue();
-  const cameraLookAtX = useMotionValue();
+  
+
+  const cameraPositionX = useMotionValue(0);
+  const cameraLookAtX = useMotionValue(0);
 
   useEffect(() => {
     animate(cameraPositionX, menuOpened ? -5 : 0, {
