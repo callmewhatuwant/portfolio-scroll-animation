@@ -98,17 +98,17 @@ export const Experience = (props) => {
           },
           1: {
             y: -viewport.height + 0.5,
-            x: 0,
+            x: isMobile ? 0.3: 0,
             z: 7,
             rotateX: 0,
-            rotateY: 0,
+            rotateY: isMobile ? -Math.PI / 2 : 0,
             rotateZ: 0,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1
+            scaleX: isMobile ? 1.5 : 1,
+            scaleY: isMobile ? 1.5: 1,
+            scaleZ: isMobile ? 1.5: 1,
           },
           2: {
-            x: -2,
+            x: isMobile ? -1.4 : -2,
             y: -viewport.height * 2 + 0.5,
             z: 0,
             rotateX: 0,
@@ -121,7 +121,7 @@ export const Experience = (props) => {
           },
           3: {
             y: -viewport.height * 3 + 1,
-            x: 0.3,
+            x: 0.24,
             z: 8.5,
             rotateX: 0,
             rotateY: -Math.PI / 4,
