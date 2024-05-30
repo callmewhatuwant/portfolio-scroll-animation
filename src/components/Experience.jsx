@@ -161,7 +161,7 @@ export const Experience = (props) => {
         <group
           ref={characterContainerAboutRef}
           name="CharacterSpot"
-          position={[-0.293, 0.125, -0.689]}
+          position={[-0.293, 0.14, -0.77]}
           rotation={[-Math.PI, 0.322, -Math.PI]} 
           scale={1.05}
         ></group>
